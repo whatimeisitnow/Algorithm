@@ -17,8 +17,8 @@ public class Main {
 
         // N개의 정수를 담는 정수 배열 arr 선언 및 초기화
         int [] arr =  new int[N];
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
@@ -30,8 +30,9 @@ public class Main {
 
         // 찾아야 할 숫자 목록들을 배열에 담기 arrTarget
         int [] arrTarget  = new int[M];
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < M; i++) {
-            st = new StringTokenizer(br.readLine());
+            arrTarget[i] = Integer.parseInt(st.nextToken());
         }
 
         // 이진트리를 이용해서 존재 유무 찾기
@@ -40,23 +41,25 @@ public class Main {
             int right = N - 1;
             int mid = (N-1)/2;
             boolean flag = false;
-            while (left < right){
-                if(arr[i] ==  arr[mid]){
-                    flag = true;
+            while (left <= right){
+                if(arr[mid] ==  arrTarget[i]){
+                    flag = true; break;
                 }
-                if (arr[i] > arrTarget[mid]){
+                if (arrTarget[i] > arr[mid]){
                     left = mid + 1;
                     mid = (left + right)/2;
-                } else if (arr[i] < arrTarget[mid]){
+                } else if (arrTarget[i] < arr[mid]){
                     right = mid - 1;
                     mid = (left + right)/2;
                 }
             }
 
             if (flag == true){
+//                System.out.println("arrTarget" + i + " :" + arrTarget[i]);
                 System.out.println(1);
             }
             else{
+//                System.out.println("arrTarget" + i + " :" + arrTarget[i]);
                 System.out.println(0);
             }
         }
