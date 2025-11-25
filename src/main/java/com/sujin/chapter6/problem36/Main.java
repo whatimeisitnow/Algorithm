@@ -14,7 +14,7 @@ public class Main {
         String formula = br.readLine();
 //        System.out.println(formula);
 
-        // 한 글자 단위로 쪼개서 배열(arr)에 넣기
+        // 숫자 단위로 배열(arr)에 넣기
         StringTokenizer st = new StringTokenizer(formula);
         String [] arr =  st.nextToken().split("-");
 
