@@ -54,7 +54,7 @@ public class Main {
                 }
             }
 
-            if (flag == true){
+            if (flag){
 //                System.out.println("arrTarget" + i + " :" + arrTarget[i]);
                 System.out.println(1);
             }

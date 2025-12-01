@@ -3,7 +3,6 @@ package com.sujin.chapter7.problem37;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -11,7 +10,7 @@ public class Main {
         //에라토스테네스로 소수 구하기
 
         // 입력받기
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st=new StringTokenizer(br.readLine());
 
         int M=Integer.parseInt(st.nextToken());
